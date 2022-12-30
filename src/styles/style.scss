@@ -1,0 +1,25 @@
+@use "./utils/variables";
+
+@import url(layouts/_home.scss);
+@import url(layouts/_header.scss);
+@import url(layouts/_footer.scss);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: variables.$color-primary;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul li {
+  list-style: none;
+}

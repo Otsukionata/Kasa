@@ -1,0 +1,33 @@
+@use "../utils/variables";
+
+header {
+  display: flex;
+  margin: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$color-primary;
+  padding: 15px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.activePage {
+  text-decoration: underline;
+}

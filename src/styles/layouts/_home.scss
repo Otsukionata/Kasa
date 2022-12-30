@@ -1,0 +1,54 @@
+@use "../utils/variables";
+
+.cover {
+  position: relative;
+  text-align: center;
+  width: variables.$width;
+  height: 225px;
+  margin: variables.$center;
+
+  &__txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+  }
+
+  &__img {
+    object-fit: cover;
+    border-radius: variables.$radius25;
+    width: 100%;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  width: variables.$width;
+  margin: variables.$center;
+  border-radius: variables.$radius25;
+  background-color: variables.$color-secondary;
+
+  &__thumbnail {
+    position: relative;
+    height: 320px;
+    width: 320px;
+    margin: 1.2rem;
+    border-radius: variables.$radius10;
+    color: white;
+    background-color: variables.$color-primary;
+  }
+
+  &__txt {
+    position: absolute;
+    bottom: 1.1rem;
+    left: 1.1rem;
+    color: white;
+    width: 50%;
+    font-size: 1.1rem;
+  }
+}
