@@ -1,0 +1,30 @@
+@use "../utils/variables";
+
+.about__cover {
+  width: variables.$width;
+  height: 25px;
+  margin: variables.$center;
+
+  &--img {
+    object-fit: cover;
+    border-radius: variables.$radius25;
+    width: 100%;
+  }
+}
+
+.about__panel {
+  width: 75%;
+  margin: variables.$center;
+  transition: all 0.5s ease;
+
+  &--down active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  &--down inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100px);
+  }
+}
