@@ -41,14 +41,44 @@
     border-radius: variables.$radius10;
     color: white;
     background-color: variables.$color-primary;
+    transition: all 0.5s ease;
+
+    &:hover {
+      box-shadow: 0 5px 15px black;
+      transform: scale(1.05);
+    }
   }
 
-  &__txt {
+  &__title {
     position: absolute;
-    bottom: 1.1rem;
-    left: 1.1rem;
-    color: white;
-    width: 50%;
-    font-size: 1.1rem;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(255, 96, 96);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 96, 96, 0) 0%,
+      rgba(255, 96, 96, 0) 55%,
+      rgba(128, 128, 128, 1) 95%
+    );
+    border-radius: 0 0 10px 10px;
+
+    &__txt {
+      position: absolute;
+      bottom: 1.1rem;
+      left: 1.1rem;
+      color: white;
+      width: 50%;
+      font-size: 1.1rem;
+    }
+  }
+  &__img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: variables.$radius10;
   }
 }
