@@ -14,7 +14,7 @@ export default function Collapse({ description, title }) {
         }}
       >
         <p>{title}</p>
-        <img src={Chevron} className={toggle && "active"} alt="" />
+        <img src={Chevron} className={toggle ? "active" : undefined} alt="" />
       </div>
       {toggle && (
         <div className={`accordeon__toggle ${open ? "active" : "inactive"}`}>
