@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-import Icon from "../assets/arrowUp.png";
+import Chevron from "../assets/arrowUp.png";
 
 export default function Collapse({ description, title }) {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="about__panel">
+    <div className="accordeon">
       <div
         key={Math.random()}
-        className="dropdown__toggle"
+        className="accordeon__trigger"
         onClick={() => {
           setToggle(!toggle);
         }}
       >
         <p>{title}</p>
-        <img src={Icon} alt="" />
+        <img src={Chevron} className={toggle && "active"} alt="" />
       </div>
       {toggle && (
-        <div className={`about__arrow ${open ? "active" : "inactive"}`}>
-          <p>{description}</p>
+        <div className={`accordeon__toggle ${open ? "active" : "inactive"}`}>
+          <p aria-hidden={toggle ? "false" : "true"}>{description}</p>
         </div>
       )}
     </div>
