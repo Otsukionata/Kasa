@@ -1,8 +1,12 @@
 @use "./utils/variables";
 
 @import url(layouts/_home.scss);
-@import url(layouts/_header.scss);
-@import url(layouts/_footer.scss);
+@import url(layouts/_about.scss);
+@import url(layouts/_errorPage.scss);
+
+@import url(components/_header.scss);
+@import url(components/_footer.scss);
+@import url(components/_slider.scss);
 
 * {
   margin: 0;
