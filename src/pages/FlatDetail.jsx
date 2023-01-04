@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
+
 import Slideshow from "../components/Slideshow";
+import Collapse from "../components/Collapse";
 
 export default function FlatDetail({ id }) {
   const { data } = useParams;
