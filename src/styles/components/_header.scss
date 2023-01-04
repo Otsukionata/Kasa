@@ -2,28 +2,40 @@
 
 header {
   display: flex;
-  margin: 3rem;
+  margin: 2.5rem 4rem;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    margin: 1rem;
+  }
 }
 
 .logo {
-  height: 60px;
+  max-height: 60px;
+  @media screen and (max-width: 768px) {
+    height: 40px;
+  }
 }
 
 nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-end;
-  width: 50%;
+  gap: 2rem;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
 }
 
 a {
   text-decoration: none;
   color: variables.$color-primary;
-  padding: 15px;
+  padding: 5px;
 
-  &:hover {
+  &.active {
     text-decoration: underline;
   }
 }
