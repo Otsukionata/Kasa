@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <main>
       <div className="cover">
-        <p className="cover__txt">Chez vous, partout et ailleurs</p>
+        <h1>Chez vous, partout et ailleurs</h1>
         <img src={Image} alt="" className="cover__img" />
       </div>
-      <div className="gallery">
+      <div className="cards">
         {Flats.map(({ id, title, cover }) => (
           <Card key={id} title={title} id={id} cover={cover} />
         ))}

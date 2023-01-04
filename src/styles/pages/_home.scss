@@ -6,14 +6,24 @@
   width: variables.$width90;
   height: 225px;
   margin: variables.$center;
+  @media screen and (max-width: 768px) {
+    height: 111px;
+  }
 
-  &__txt {
+  > h1 {
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 2rem;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+      padding: 1rem;
+      text-align: left;
+      line-height: 100%;
+    }
   }
 
   &__img {
@@ -23,27 +33,27 @@
   }
 }
 
-.gallery {
+.cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  width: variables.$width90;
+  width: variables.$width;
   margin: variables.$center;
   border-radius: variables.$radius25;
-  background-color: variables.$color-secondary;
 
   &__thumbnail {
     position: relative;
     height: 320px;
     width: 320px;
     margin: 1.2rem;
+    padding: 0;
     border-radius: variables.$radius10;
     color: white;
     transition: all 0.5s ease;
 
     &:hover {
-      box-shadow: 0 5px 15px black;
+      box-shadow: 0 5px 15px #000000;
       transform: scale(1.05);
     }
   }
@@ -54,7 +64,7 @@
     height: 100%;
     width: 100%;
     text-align: left;
-    background-color: rgb(255, 96, 96);
+    background: rgb(255, 96, 96);
     background: linear-gradient(
       180deg,
       rgba(255, 96, 96, 0) 0%,
@@ -63,15 +73,16 @@
     );
     border-radius: 0 0 10px 10px;
 
-    &__txt {
+    &--txt {
       position: absolute;
-      bottom: 1.1rem;
-      left: 1.1rem;
+      bottom: 0;
+      left: 0rem;
+      margin: 10px;
       color: white;
-      width: 50%;
       font-size: 1.1rem;
     }
   }
+
   &__img {
     background-repeat: no-repeat;
     background-size: cover;
