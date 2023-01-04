@@ -3,7 +3,7 @@
 .cover {
   position: relative;
   text-align: center;
-  width: variables.$width;
+  width: variables.$width90;
   height: 225px;
   margin: variables.$center;
 
@@ -28,7 +28,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  width: variables.$width;
+  width: variables.$width90;
   margin: variables.$center;
   border-radius: variables.$radius25;
   background-color: variables.$color-secondary;
@@ -40,7 +40,6 @@
     margin: 1.2rem;
     border-radius: variables.$radius10;
     color: white;
-    background-color: variables.$color-primary;
     transition: all 0.5s ease;
 
     &:hover {
