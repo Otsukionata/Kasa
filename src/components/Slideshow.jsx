@@ -1,39 +1,55 @@
 import React, { Fragment, useState } from "react";
-import Btn_Slider from "./Btn_Slider";
 
-export default function Slideshow({ Slides }) {
-  const [slideIndex, setSlideIndex] = useState(1);
+import LeftArrow from "../assets/arrowLeft.svg";
+import RightArrow from "../assets/arrowRight.svg";
 
-  const nextSlide = () => {
-    if (slideIndex !== Slides.length) {
-      setSlideIndex(setSlideIndex + 1);
-    } else if (slideIndex === Slides.length) {
-      setSlideIndex(1);
-    }
+export default function Slideshow({ pictures }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goPrevious = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? pictures.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
   };
 
-  const previousSlide = () => {
-    if (slideIndex !== 1) {
-      setSlideIndex(setSlideIndex - 1);
-    } else if (slideIndex === 1) {
-      setSlideIndex(Slides.length);
-    }
+  const goNext = () => {
+    const isLastSlide = currentIndex === pictures.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
   };
 
   return (
-    <div className="slider__container">
-      {Slides.map((object, index) => {
-        const images = object.pictures;
-
-        return (
-          <div
-            key={object.id}
-            className={slideIndex === index + 1 ? "slide active_anim" : "slide"}
-          ></div>
-        );
-      })}
-      <Btn_Slider moveSlide={nextSlide} direction={"next"} />
-      <Btn_Slider moveSlide={previousSlide} direction={"previous"} />
+    <div className="carousel">
+      <img
+        className="carousel__navigation left"
+        src={LeftArrow}
+        onClick={goPrevious}
+        alt="photo précédente"
+      />
+      <div className="carousel__img">
+        {pictures.map((image, index) => {
+          return (
+            <React.Fragment key={Math.random()}>
+              {index === currentIndex && (
+                <img
+                  className="carousel__img"
+                  src={pictures[currentIndex]}
+                  alt=""
+                />
+              )}
+            </React.Fragment>
+          );
+        })}
+      </div>
+      <span className="carousel__count">
+        {currentIndex + 1} / {pictures.length}
+      </span>
+      <img
+        className="carousel__navigation right"
+        src={RightArrow}
+        onClick={goNext}
+        alt="photo suivante"
+      />
     </div>
   );
 }

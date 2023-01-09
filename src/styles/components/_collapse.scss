@@ -1,33 +1,37 @@
 @use "../utils/variables";
 
 .accordeon {
-  flex-wrap: nowrap;
-  margin: variables.$center;
-  gap: 2rem;
+  margin: 0px auto;
   padding: 0.5em;
-  min-width: 45%;
   max-width: 80%;
+  min-width: 50%;
+  @media screen and (max-width: 768px) {
+    gap: 0;
+    max-width: 90%;
+  }
 
-  &__trigger {
+  &__visible {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
+    align-items: center;
     height: 34px;
     padding: 7px 15px;
+    color: white;
+    cursor: pointer;
     border-radius: 5px;
     border: 1px solid transparent;
     background-color: variables.$color-primary;
-    color: white;
-    > p {
+
+    > span {
       padding: 15px 0;
       font-size: 20px;
     }
-
     > img {
       width: 20px;
       transition: transform 0.2s ease-in-out;
       transform: rotate(-90deg);
+
       &.active {
         transform: rotate(180deg);
       }
@@ -40,8 +44,12 @@
     background-color: variables.$color-secondary;
     padding: 0.8em;
     border-radius: 0 0 5px 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+
     > p {
       margin: 0;
+      padding: 5px;
       pointer-events: none;
       line-height: 1.3;
     }
@@ -50,12 +58,7 @@
       opacity: 1;
       transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
       height: fit-content;
-    }
-
-    &.inactive {
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
-      height: 0;
+      margin: 0 0 0.1rem 0;
     }
   }
 }

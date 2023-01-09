@@ -1,0 +1,33 @@
+.footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  height: 209px;
+  margin-top: 2rem;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    height: 40px;
+    margin: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+      margin: 1.6rem 0;
+    }
+  }
+
+  &__txt {
+    font-size: 1.4rem;
+    /* or 34px */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}

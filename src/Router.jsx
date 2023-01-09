@@ -1,12 +1,15 @@
-import React, { Fragment } from "react";
 import { Routes, Route } from "react-router-dom";
+import React, { Fragment } from "react";
 
-import Header from "./components/Header";
-
+// Import des pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import FlatDetail from "./pages/FlatDetail";
+import Appartement from "./pages/Flat";
 import ErrorPage from "./pages/ErrorPage";
+
+// Import des composants
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 export default function Router() {
   return (
@@ -15,10 +18,11 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="housing/:id" element={<FlatDetail />} />
+        <Route path="housing/:id" element={<Appartement />} />
 
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </React.Fragment>
   );
 }

@@ -1,0 +1,11 @@
+.red-star {
+  // color: #ff6060;
+  filter: brightness(0) saturate(100%) invert(49%) sepia(75%) saturate(1729%)
+    hue-rotate(323deg) brightness(99%) contrast(102%);
+}
+
+.gray-star {
+  // color: #e3e3e3;
+  filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(1592%)
+    hue-rotate(285deg) brightness(113%) contrast(78%);
+}

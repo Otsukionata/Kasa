@@ -1,0 +1,134 @@
+@use "../utils/variables";
+
+h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+.flat {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  @media screen and (max-width: 768px) {
+    display: block;
+    font-size: 0.6rem;
+  }
+
+  &__details {
+    width: 75%;
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+    gap: 0.6rem;
+  }
+
+  &__tagTxt {
+    width: 115px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 0.7rem;
+    color: white;
+    background-color: variables.$color-primary;
+    border-radius: variables.$radius10;
+  }
+
+  &__profile {
+    text-align: right;
+    width: 25%;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 0.3rem;
+      width: 97%;
+    }
+
+    &--infos {
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 1rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: 0.75rem;
+        margin-right: 0;
+        width: 50%;
+      }
+
+      &--infos::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      & .picture {
+        margin-left: 0.3rem;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        @media screen and (max-width: 768px) {
+          margin-top: 20px;
+          max-width: 64px;
+          justify-content: flex-end;
+          max-height: 64px;
+        }
+
+        > img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+          float: right;
+          shape-outside: margin-box;
+          object-fit: cover;
+        }
+      }
+    }
+    &--ratings {
+      display: block;
+      text-align: left;
+      margin: 15px 0;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: self-start;
+        text-align: left;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+.accommodations {
+  display: flex;
+  gap: 0.2rem;
+  margin: 20px auto;
+  width: 95%;
+  justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    width: 100%;
+  }
+}
