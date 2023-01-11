@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import React, { Fragment } from "react";
+import React from "react";
 
 // Import des pages
 import Home from "./pages/Home";
@@ -13,7 +13,7 @@ import { Footer } from "./components/Footer";
 
 export default function Router() {
   return (
-    <React.Fragment>
+    <React.StrictMode>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +23,6 @@ export default function Router() {
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
       <Footer />
-    </React.Fragment>
+    </React.StrictMode>
   );
 }
