@@ -8,8 +8,8 @@ import Appartement from "./pages/Flat";
 import ErrorPage from "./pages/ErrorPage";
 
 // Import des composants
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Router() {
   return (
