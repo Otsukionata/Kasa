@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../assets/Kasa-Logo.png";
+import Logo from "../assets/Kasa-LogoWhite.svg";
 
 export default function Footer() {
   return (
