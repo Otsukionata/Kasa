@@ -4,7 +4,7 @@ import React from "react";
 // Import des pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Appartement from "./pages/Flat";
+import Appartement from "./pages/FlatDetail";
 import ErrorPage from "./pages/ErrorPage";
 
 // Import des composants
