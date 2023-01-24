@@ -20,12 +20,16 @@ export default function Slideshow({ pictures }) {
 
   return (
     <div className="carousel">
-      <img
-        className="carousel__navigation left"
-        src={LeftArrow}
-        onClick={goPrevious}
-        alt="photo précédente"
-      />
+      {pictures.length === 1 ? (
+        ""
+      ) : (
+        <img
+          className="carousel__navigation left"
+          src={LeftArrow}
+          onClick={goPrevious}
+          alt="photo précédente"
+        />
+      )}
       <div className="carousel__img">
         {pictures.map((image, index) => {
           return (
@@ -44,12 +48,16 @@ export default function Slideshow({ pictures }) {
       <span className="carousel__count">
         {currentIndex + 1} / {pictures.length}
       </span>
-      <img
-        className="carousel__navigation right"
-        src={RightArrow}
-        onClick={goNext}
-        alt="photo suivante"
-      />
+      {pictures.length === 1 ? (
+        ""
+      ) : (
+        <img
+          className="carousel__navigation right"
+          src={RightArrow}
+          onClick={goNext}
+          alt="photo suivante"
+        />
+      )}
     </div>
   );
 }
