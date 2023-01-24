@@ -63,7 +63,7 @@ h2 {
       gap: 0.3rem;
       width: 97%;
     }
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 380px) {
       display: block;
       width: 100%;
     }
@@ -81,7 +81,7 @@ h2 {
         width: 50%;
       }
 
-      @media screen and (max-width: 300px) {
+      @media screen and (max-width: 380px) {
         width: 100%;
         justify-content: start;
         margin: 10px;
