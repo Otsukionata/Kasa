@@ -55,13 +55,16 @@ h2 {
   }
 
   &__profile {
-    text-align: right;
     width: 25%;
     @media screen and (max-width: 768px) {
       display: flex;
       flex-direction: row-reverse;
       gap: 0.3rem;
       width: 97%;
+    }
+    @media screen and (max-width: 300px) {
+      display: block;
+      width: 100%;
     }
 
     &--infos {
@@ -77,6 +80,12 @@ h2 {
         width: 50%;
       }
 
+      @media screen and (max-width: 300px) {
+        width: 100%;
+        justify-content: start;
+        margin: 10px;
+      }
+
       &--infos::after {
         content: "";
         display: block;
@@ -89,10 +98,10 @@ h2 {
         height: 64px;
         border-radius: 50%;
         @media screen and (max-width: 768px) {
-          margin-top: 20px;
-          max-width: 64px;
           justify-content: flex-end;
-          max-height: 64px;
+          margin-top: 20px;
+          min-width: 64px;
+          min-height: 64px;
         }
 
         > img {
@@ -112,7 +121,7 @@ h2 {
 
       @media screen and (max-width: 768px) {
         display: flex;
-        justify-content: self-start;
+        justify-content: flex-start;
         text-align: left;
         margin: 10px;
       }
