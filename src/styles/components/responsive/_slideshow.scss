@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 225px;
+
+    &__navigation {
+      height: 30px;
+    }
+  }
+}

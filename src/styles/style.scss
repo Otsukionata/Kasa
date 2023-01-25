@@ -5,11 +5,21 @@
 @import url(layouts/_flatDetails.scss);
 @import url(layouts/_errorPage.scss);
 
+@import url(layouts/responsive/_home.scss);
+@import url(layouts/responsive/_about.scss);
+@import url(layouts/responsive/_flatDetails.scss);
+@import url(layouts/responsive/_errorPage.scss);
+
 @import url(components/_header.scss);
 @import url(components/_footer.scss);
 @import url(components/_ratings.scss);
 @import url(components/_slideshow.scss);
 @import url(components/_collapse.scss);
+
+@import url(components/responsive/_header.scss);
+@import url(components/responsive/_collapse.scss);
+@import url(components/responsive/_slideshow.scss);
+@import url(components/responsive/_footer.scss);
 
 * {
   margin: 0;

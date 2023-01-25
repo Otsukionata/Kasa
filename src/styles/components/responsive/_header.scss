@@ -1,0 +1,22 @@
+@media screen and (max-width: 768px) {
+  header {
+    margin: 1rem;
+  }
+
+  .logo {
+    height: 40px;
+    min-width: 125px;
+  }
+
+  nav {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 350px) {
+    nav {
+      flex-wrap: wrap;
+    }
+  }
+}

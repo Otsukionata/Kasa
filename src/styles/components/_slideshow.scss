@@ -5,9 +5,6 @@
   width: variables.$width;
   height: 415px;
   margin: variables.$center;
-  @media screen and (max-width: 768px) {
-    height: 225px;
-  }
 
   &__count {
     position: absolute;
@@ -30,9 +27,6 @@
   &__navigation {
     color: white;
     height: 50px;
-    @media screen and (max-width: 768px) {
-      height: 30px;
-    }
 
     &.left {
       position: absolute;

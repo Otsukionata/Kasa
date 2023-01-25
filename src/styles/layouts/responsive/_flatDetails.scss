@@ -1,0 +1,65 @@
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  .flat {
+    display: block;
+    font-size: 0.6rem;
+
+    &__details {
+      width: 90%;
+    }
+
+    &__profile {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 0.3rem;
+      width: 97%;
+
+      &--infos {
+        text-align: right;
+        font-size: 0.75rem;
+        margin-right: 0;
+        width: 50%;
+
+        & .picture {
+          justify-content: flex-end;
+          margin-top: 20px;
+          min-width: 64px;
+          min-height: 64px;
+        }
+      }
+      &--ratings {
+        display: flex;
+        justify-content: flex-start;
+        text-align: left;
+        margin: 10px;
+      }
+    }
+  }
+
+  .accommodations {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .flat {
+    &__profile {
+      display: block;
+      width: 100%;
+      &--infos {
+        width: 100%;
+        justify-content: start;
+        margin: 10px;
+      }
+    }
+  }
+}

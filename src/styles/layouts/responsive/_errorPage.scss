@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+  .error {
+    margin: 8rem 2rem;
+    width: 85%;
+
+    &__code {
+      font-size: 6.4rem;
+    }
+    &__txt {
+      font-size: 1.2rem;
+    }
+  }
+}

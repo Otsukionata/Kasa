@@ -13,9 +13,6 @@
     margin: 2rem 0;
     align-items: center;
     justify-content: center;
-    @media screen and (max-width: 768px) {
-      margin: 1.6rem 0;
-    }
   }
 
   &__txt {
@@ -25,9 +22,5 @@
     align-items: flex-end;
     justify-content: center;
     text-align: center;
-    @media screen and (max-width: 768px) {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
   }
 }
