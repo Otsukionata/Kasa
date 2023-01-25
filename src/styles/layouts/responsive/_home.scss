@@ -18,14 +18,17 @@
       margin: 0.7rem;
       height: 255px;
       width: 17rem;
-
-      @media screen and (max-width: 670px) {
-        margin: 0.5rem;
-        width: 98%;
-      }
     }
-    @media screen and (max-width: 670px) {
-      width: 96%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .cards {
+    width: 96%;
+
+    &__thumbnail {
+      margin: 0.5rem;
+      width: 98%;
     }
   }
 }
