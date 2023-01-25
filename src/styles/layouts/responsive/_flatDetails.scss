@@ -40,6 +40,7 @@
         justify-content: flex-start;
         text-align: left;
         margin: 10px;
+        width: 2rem;
       }
     }
   }
@@ -59,6 +60,26 @@
         width: 100%;
         justify-content: start;
         margin: 10px;
+      }
+      &--ratings {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flat {
+    &__profile {
+      display: flex;
+      width: 100%;
+      &--infos {
+        width: 32%;
+        justify-content: start;
+        margin: 10px;
+      }
+      &--ratings {
+        width: 7%;
       }
     }
   }
